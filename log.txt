@@ -1,3 +1,4 @@
+9f717fb fix log file
 0c05e64 Task 1.2
 4718c87 Task 2.4: refactor getTotalAmount, getTotalVolumeCredits
 520ab1a Task 2.3: refactor frmt

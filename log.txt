@@ -1,7 +1,7 @@
+0c05e64 Task 1.2
 4718c87 Task 2.4: refactor getTotalAmount, getTotalVolumeCredits
 520ab1a Task 2.3: refactor frmt
 802e992 Task 2.2: refactor getVolumeCredits
-2a8dd66 Task 1.1 and Task 1.2
 0ed68ce Task 2.1: refactor in-line thisAmount
 8332dba Task 2.1: refactor getAmount
 2b4f164 fixed tests for the not-for-credit tasks; parameter ordering and ensuring consistent line endings.

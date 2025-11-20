@@ -29,17 +29,14 @@ public class StatementPrinter {
         NumberFormat frmt = NumberFormat.getCurrencyInstance(Locale.US);
 
         for (Performance p : invoice.getPerformances()) {
-
-            int thisAmount = getAmount(p);
-
             // add volume credits
             volumeCredits += Math.max(p.audience - Constants.BASE_VOLUME_CREDIT_THRESHOLD, 0);
             // add extra credit for every five comedy attendees
             if ("comedy".equals(getPlay(p).type)) volumeCredits += p.audience / Constants.COMEDY_EXTRA_VOLUME_FACTOR;
 
             // print line for this order
-            result.append(String.format("  %s: %s (%s seats)%n", getPlay(p).name, frmt.format(thisAmount / 100), p.audience));
-            totalAmount += thisAmount;
+            result.append(String.format("  %s: %s (%s seats)%n", getPlay(p).name, frmt.format(getAmount(p) / 100), p.audience));
+            totalAmount += getAmount(p);
         }
         result.append(String.format("Amount owed is %s%n", frmt.format(totalAmount / 100)));
         result.append(String.format("You earned %s credits%n", volumeCredits));
